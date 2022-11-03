@@ -12,6 +12,8 @@ If the element is found, we will return the position (or index) of the element. 
 
 
 */
+// Implement the algorithm:-
+
 let arr = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
 let index = 1;
 function linearSearch(arr, index) {
@@ -24,3 +26,21 @@ function linearSearch(arr, index) {
 }
 const findOut = linearSearch(arr, index);
 console.log(findOut);
+
+// another: -
+let data = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+let position = 5;
+const linearSearch2 = (data, position) => {
+  let result = [];
+  for (let i = 0; i < data.length; i++) {
+    if (data[i] === position) {
+      console.log(i);
+      result.push(i);
+    }
+    }
+    if (!result) {
+        return -1
+    }
+};
+const myFunc = linearSearch2(data, position);
+console.log(myFunc);

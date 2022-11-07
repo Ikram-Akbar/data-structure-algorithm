@@ -7,8 +7,9 @@ const demoArray = [1, 0, 2, 0, 2, 4, 5];
 const uniqueValues = demoArray.filter((val, index, arr) => {
   return arr.indexOf(val) == index;
 });
-// console.log(uniqueValues);
-//[ 1, 0, 2, 4, 5 ]
+
+console.log(uniqueValues);
+// result : - [ 1, 0, 2, 4, 5 ]
 
 // create a loop that with return the unique copy of an array : -
 let uniqueNumber = [];
@@ -19,11 +20,11 @@ for (let i = 0; i < demoArray.length; i++) {
     uniqueNumber.push(element);
   }
 }
-// console.log(uniqueNumber);
-// [1, 0, 2, 4, 5];
+console.log(uniqueNumber);
+//result :-  [1, 0, 2, 4, 5];
 
-//  [1, 0, 2, 0, 2, 4, 5];
 /* 
+ [1, 0, 2, 0, 2, 4, 5] : - iterate between each element : - 
 [
     i = 1 => j = 0;
     i = 1 => j = 2;
@@ -51,19 +52,34 @@ for (let i = 0; i < demoArray.length; i++) {
     i = 4 => j = 5;
 
     i = 5 => j = 5;
-
-
 ]
  */
+// ------------------------------
 
+const newArr = [];
 for (let i = 0; i < demoArray.length; i++) {
   const element = demoArray[i];
-  for (let j = i + 1; j < demoArray.length; j++) {
-    const ele = demoArray[j];
-    if (element === ele) {
-      demoArray.splice(j, 1);
-    }
+  if (!newArr.includes(element)) {
+    newArr.push(element);
   }
 }
 
-console.log(demoArray);
+console.log(newArr);
+
+// ---------------------------------------------------------------------
+
+let myNum = [];
+for (i = 0; i < demoArray.length; i++) {
+  count = 1;
+  for (j = i + 1; i < demoArray.length; j++) {
+    if (demoArray[i] === demoArray[j]) {
+      count++;
+      myNum[j] = 0;
+    }
+  }
+  if (myNum[i] != 0) {
+    myNum[i] = count;
+  }
+}
+
+console.log(myNum);

@@ -3,6 +3,7 @@
  Divisible by 3 = fizz
  Divisible by 5 = buzz
  Divisible by both = fizzBuzz
+ 
  */
 // range 25;
 let n = 25;

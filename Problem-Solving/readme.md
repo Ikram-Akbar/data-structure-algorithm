@@ -20,3 +20,11 @@
 16. Write a JavaScript function to calculate the sum of values in an array.
 17. Write a JavaScript program to find the leap years in a given range of years.
 18. Write an algorithm to swap two given numbers in without using a temporary variable without using any library function.
+
+
+
+
+
+
+
+

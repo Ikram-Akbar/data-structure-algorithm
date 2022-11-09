@@ -7,3 +7,4 @@ for (let i = 0; i < newArr.length; i = i + 2) {
 
     console.log(newArr[i]);
 }
+

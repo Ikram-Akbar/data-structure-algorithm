@@ -6,9 +6,9 @@
 6. Write a function that Reverse a given integer number.
 
 
-7. Use a loop to display elements from a given list present at odd index positions
-8. Find the largest item from a given list.
-9. Write a program to count occurrences of all characters within a string.
+7.  Use a loop to display elements from a given list present at odd index positions
+8.  Find the largest item from a given list.
+9.  Write a program to count occurrences of all characters within a string.
 10. Write a program that asks the user how many Fibonacci numbers to generate and then generates them.
 11. Count the vowels in a string.
 12. Write a JavaScript function that returns a passed string with letters in alphabetical order.

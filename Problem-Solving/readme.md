@@ -3,7 +3,7 @@
 2. Write a function that reverses a list, preferably in place.
 3. Write a function that checks whether an element occurs in a list.
 5. Write a program to display all prime numbers within a range.
-6. Reverse a given integer number.
+6. Write a function that Reverse a given integer number.
 
 
 7. Use a loop to display elements from a given list present at odd index positions

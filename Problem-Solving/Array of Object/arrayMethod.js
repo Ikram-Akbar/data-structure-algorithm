@@ -1,4 +1,4 @@
-// Array.unshift : - to add an object at the first position --
+
 
 let cars = [
   {
@@ -21,5 +21,4 @@ let car = {
   registration: new Date("2016-05-02"),
   capacity: 2,
 };
-cars.unshift(car);
-console.log(cars);
+

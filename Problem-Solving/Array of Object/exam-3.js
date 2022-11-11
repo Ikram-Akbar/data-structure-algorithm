@@ -121,13 +121,13 @@ const inputData2 = [
 // })
 // console.log(outputSteps);
 
-let newArr = [];
-inputData2.forEach((item) => {
-  const inputData1Item = inputData1.find((data) => {
-    data === item.stepCode
-  })
-  if (inputData1Item) {
-    newArr.push(...item, ...inputData1Item)
-  }
-})
-console.log(newArr);P
+// let newArr = [];
+// inputData2.forEach((item) => {
+//   const inputData1Item = inputData1.find((data) => {
+//     data === item.stepCode
+//   })
+//   if (inputData1Item) {
+//     newArr.push(...item, ...inputData1Item)
+//   }
+// })
+// console.log(newArr);

@@ -1,4 +1,4 @@
-// add a new object at the end  - Array.push()
+
 
 let cars = [
   {
@@ -14,6 +14,7 @@ let cars = [
     capacity: 5,
   },
 ];
+
 let car = {
   color: "red",
   type: "carbo",
@@ -21,5 +22,3 @@ let car = {
   capacity: 2,
 };
 
-cars.push(car);
-console.log(cars);

@@ -85,10 +85,15 @@ const inputData2 = [
 
 // sol:-
 
-let arr3 = inputData1.map((val, i) => {
-    Object.assign({}, val, inputData2[i])
-});
-console.log(arr3);
+// let arr3 = inputData1.map((val) => {
+//   // console.log(val);
+ 
+// })
+// const demoData2 = inputData2.forEach((ele) => {
+//   return ele;
+
+//  });
+//  console.log(demoData2);
 
 // const newArr = inputData1.map((item) => {
 //     const data = inputData2.filter((ele) => ele.url == item.stepName)
@@ -101,3 +106,28 @@ console.log(arr3);
 //   console.log(rest)
 // })
 
+// let outputSteps = [];
+// inputData1.forEach((val) => {
+//   outputSteps.push({
+//     ...inputData1, ...(inputData2.find((url) => {
+//      return url.url === inputData1[i].stepName
+//     }))
+//   })
+// })
+// console.log(outputSteps);
+// let outputSteps = [];
+// inputData1.forEach((val) => {
+//  outputSteps.push({...inputData1, ...inputData2})
+// })
+// console.log(outputSteps);
+
+let newArr = [];
+inputData2.forEach((item) => {
+  const inputData1Item = inputData1.find((data) => {
+    data === item.stepCode
+  })
+  if (inputData1Item) {
+    newArr.push(...item, ...inputData1Item)
+  }
+})
+console.log(newArr);P

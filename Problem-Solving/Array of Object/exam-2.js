@@ -75,26 +75,36 @@ const studentsExamScore = [
   },
 ];
 
-// const addTotalScore = (data) => {
-//   data.forEach((d) => {
-//     d.total_score = d.subjects.reduce((p, c) => (p += c.score), 0);
-//   });
-//   data.sort((a, b) => b.total_score - a.total_score);
-
-//   return data;
-// };
-
-// console.log(addTotalScore(studentsExamScore));
-
-function addTotalScore(studentsExamScore) {
-  studentsExamScore.forEach((student) => {
-    let totalScore = 0;
-    student.subjects.forEach((subject) => {
-      totalScore += subject.score;
-    });
-    student.total_score = totalScore;
+//sol:--
+function addToTotalScore(data) {
+  data.forEach((element) => {
+    let subjectsNum = element.subjects.reduce((a, c) => (a = a + c.score),0);
+    element.totalMarks = subjectsNum;
   });
-  return studentsExamScore;
+  data.sort((a, b) => b.totalMarks - a.totalMarks);
+  return data;
 }
-console.log(addTotalScore(studentsExamScore));
+console.log(addToTotalScore(studentsExamScore));
+
+// const newArry = [];
+// function sortedStudents(data) {
+//   let totalScors = 0;
+//   let newObj = {};
+//   let subArray = [];
+//   data.forEach((student) => {
+//     student.subjects.forEach((sub) => {
+//       totalScors += sub.score;
+//       subArray.push(sub);
+//     });
+//     newObj = { name: student.name, roll: student.roll, totalScors: totalScors };
+//     newObj.subjects = subArray;
+//     newArry.push(newObj);
+//     totalScors = 0;
+//   });
+//   newArry.sort((a, b) => b.totalScors - a.totalScors);
+//   console.log(newArry);
+// }
+
+// sortedStudents(studentsExamScore);
+
 

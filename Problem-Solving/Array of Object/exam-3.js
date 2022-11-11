@@ -83,3 +83,21 @@ const inputData2 = [
 ];
 
 
+// sol:-
+
+let arr3 = inputData1.map((val, i) => {
+    Object.assign({}, val, inputData2[i])
+});
+console.log(arr3);
+
+// const newArr = inputData1.map((item) => {
+//     const data = inputData2.filter((ele) => ele.url == item.stepName)
+//     return {...item, data}
+// })
+// console.log(newArr);
+
+
+// const newArr = inputData1.map(({ stepName, stepCode, ...rest }) => {
+//   console.log(rest)
+// })
+

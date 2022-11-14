@@ -25,6 +25,7 @@ let sortedArray = arr.sort((x, y) => {
     return (x.name.localeCompare(y.name))
 });
 console.log(sortedArray);
+
 /* [
   { name: "Brno - bus station", value: 104411041, city: "Brno" },
   { name: "Brno - train station", value: 44411041, city: "Brno" },

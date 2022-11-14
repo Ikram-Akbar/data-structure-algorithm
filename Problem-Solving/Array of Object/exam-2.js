@@ -78,7 +78,7 @@ const studentsExamScore = [
 //sol:--
 function addToTotalScore(data) {
   data.forEach((element) => {
-    let subjectsNum = element.subjects.reduce((a, c) => (a = a + c.score),0);
+    let subjectsNum = element.subjects.reduce((a, c) => (a = a + c.score), 0);
     element.totalMarks = subjectsNum;
   });
   data.sort((a, b) => b.totalMarks - a.totalMarks);
@@ -107,4 +107,15 @@ console.log(addToTotalScore(studentsExamScore));
 
 // sortedStudents(studentsExamScore);
 
+// const myResult = (studentsExamScore) => {
+//   const result = [];
+//   for (let i = 0; i < studentsExamScore; i++) {
+//     result = [...result,
+//       {
+//       name: studentsExamScore[i].name,
+//     }]
+//   }
+//   return result;
+// };
 
+// console.log(myResult(studentsExamScore));

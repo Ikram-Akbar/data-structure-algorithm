@@ -82,12 +82,11 @@ const inputData2 = [
   },
 ];
 
-
 // sol:-
 
 // let arr3 = inputData1.map((val) => {
 //   // console.log(val);
- 
+
 // })
 // const demoData2 = inputData2.forEach((ele) => {
 //   return ele;
@@ -100,7 +99,6 @@ const inputData2 = [
 //     return {...item, data}
 // })
 // console.log(newArr);
-
 
 // const newArr = inputData1.map(({ stepName, stepCode, ...rest }) => {
 //   console.log(rest)
@@ -121,13 +119,32 @@ const inputData2 = [
 // })
 // console.log(outputSteps);
 
-let newArr = [];
-inputData2.forEach((item) => {
-  const inputData1Item = inputData1.find((data) => {
-    data === item.stepCode
-  })
-  if (inputData1Item) {
-    newArr.push(...item, ...inputData1Item)
+// let newArr = [];
+// inputData2.forEach((item) => {
+//   const inputData1Item = inputData1.find((data) => {
+//     data === item.stepCode
+//   })
+//   if (inputData1Item) {
+//     newArr.push(...item, ...inputData1Item)
+//   }
+// })
+// console.log(newArr);
+
+const output = (inputData1, inputData2) => {
+  let outputSteps = [];
+  for (let i = 0; i < inputData1.length; i++) {
+    outputSteps = [
+      ...outputSteps,
+      {
+        stepId: inputData1[i].stepId,
+        url: inputData2[i] ? inputData2[i].url : null,
+        stepCode: inputData1[i].stepCode.substr(
+          inputData1[i].stepCode.length - 3
+        ),
+        completed: inputData1[i].isCompleted,
+      },
+    ];
   }
-})
-console.log(newArr);P
+  return outputSteps;
+};
+console.log(output(inputData1, inputData2));

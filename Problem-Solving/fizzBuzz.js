@@ -8,16 +8,17 @@
 // range 25;
 let n = 25;
 const fizzBuzz = (n) => {
-  for (let i = 1; i <= n; i++) {
-    if (i % 3 === 0 && i % 5 === 0) {
-      console.log("FizzBuzz");
-    } else if (i % 5 === 0) {
-      console.log("Buzz");
-    } else if (i % 3 === 0) {
-      console.log("Fizz");
-    } else {
-      console.log(i);
-    }
+ temp = "";
+ for (let i = 1; i <= n; i++) {
+  if (i % 3 == 0) {
+   temp += "Fizz";
   }
+  if (i % 5 == 0) {
+   temp += "Buzz";
+  }
+  if (temp == "") {
+   temp += i;
+  }
+ console.log(temp);
 };
 fizzBuzz(n);

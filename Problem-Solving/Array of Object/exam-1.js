@@ -49,17 +49,32 @@ const inputData = [
 ];
 
 function mergeInputOutput(inputData) {
-    let newData = inputData.filter((val) => !val.parent);
-    
-  let newData1 = newData.map((element) => {
+  let newData = inputData.filter((val) => !val.parent);
 
-    let pId = element.id; 
+  let newData1 = newData.map((element) => {
+    let pId = element.id;
     let children = inputData.filter((child) => child.parent == pId);
     console.log(children);
-    
-     return { ...element, children };
-   }); 
-    return newData1;
+
+    return { ...element, children };
+  });
+  return newData1;
 }
 let result = mergeInputOutput(inputData);
 console.log(result);
+
+
+
+// const finalResult = (inputData) => {
+//   let newArr = [];
+//   for (let i = 0; i < inputData.length; i++) {
+//     newArr.push({
+//       id: inputData[i].id,
+//       name: inputData[i].name,
+//     });
+//   }
+
+//   return newArr;
+// };
+
+// console.log(finalResult(inputData));

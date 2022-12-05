@@ -15,11 +15,19 @@ const numsArray = num1.concat(num2);
 let first = [true, 1, "abc", { firstName: "Ikram" }];
 let second = [null];
 const mixed = second.concat(first);
-console.log(mixed);
+// console.log(mixed);
 
 // sparse Array concat:-
 
 let myArray = [1, null, , 24, false];
 let sec = ["stupid"];
 const result = sec.concat(myArray);
-console.log(result);
+// console.log(result);
+
+//non array object :-
+let newObj = {};
+let myChoice = (4, 5);
+// const r = newObj.concat(myChoice);
+// console.log(r);
+// console.log(Array.prototype.concat({}, 1, 2, 3));
+console.log(Array.concat({}, 1, 2, 3));
